@@ -1,8 +1,8 @@
 """Rebuild the floating-bubbles project graphic for the profile README.
 
 Reads your public repos from the GitHub API, draws one bubble per repo into
-assets/repo-bubbles.svg, and refreshes the repo / live counts in the README
-(between the COUNT and LIVE markers). Run by .github/workflows/update-profile.yml.
+assets/repo-bubbles.svg, and refreshes the repo / live counts and the projects badge in the README
+(between the COUNT, LIVE and BADGE markers). Run by .github/workflows/update-profile.yml.
 """
 
 import json
@@ -188,6 +188,11 @@ def main():
     text = README.read_text(encoding="utf-8")
     text = replace_between(text, "COUNT", str(len(repos)))
     text = replace_between(text, "LIVE", str(sum(1 for r in repos if r.get("homepage"))))
+    badge = (
+        f'<a href="https://github.com/{USER}?tab=repositories"><img src="https://img.shields.io/badge/'
+        f'projects-{len(repos)}_public-302b63?style=flat-square&labelColor=0f0c29" /></a>'
+    )
+    text = replace_between(text, "BADGE", badge)
     README.write_text(text, encoding="utf-8")
     print(f"Built bubbles for {len(repos)} repos.")
 
