@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="300" viewBox="0 0 820 300" role="img" aria-label="Animated evaluation report">
+  <style>
+    text { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
+    .title  { fill: #F5B700; font-size: 16px; font-weight: 700; }
+    .label  { fill: #c9d1d9; font-size: 14px; }
+    .pass   { fill: #2ea043; font-size: 14px; font-weight: 700; opacity: 0; }
+    .track  { fill: #1c1a3d; }
+    .bar    { fill: url(#barGrad); transform-box: fill-box; transform-origin: left center; transform: scaleX(0); }
+    .cursor { fill: #F5B700; animation: blink 1s steps(1) infinite; }
+    .verdict { fill: #F5B700; font-size: 18px; font-weight: 700; opacity: 0; }
+    .scan   { fill: url(#scanGrad); animation: scan 9s linear infinite; }
+
+    .r1 .bar { animation: fill 9s ease-out infinite 0.3s; }  .r1 .pass { animation: pop 9s infinite 0.3s; }
+    .r2 .bar { animation: fill 9s ease-out infinite 0.9s; }  .r2 .pass { animation: pop 9s infinite 0.9s; }
+    .r3 .bar { animation: fill 9s ease-out infinite 1.5s; }  .r3 .pass { animation: pop 9s infinite 1.5s; }
+    .r4 .bar { animation: fill 9s ease-out infinite 2.1s; }  .r4 .pass { animation: pop 9s infinite 2.1s; }
+    .r5 .bar { animation: fill 9s ease-out infinite 2.7s; }  .r5 .pass { animation: pop 9s infinite 2.7s; }
+    .verdict { animation: verdict 9s infinite 3.4s; }
+
+    @keyframes fill    { 0% { transform: scaleX(0); } 12% { transform: scaleX(1); } 85% { transform: scaleX(1); } 92%, 100% { transform: scaleX(0); } }
+    @keyframes pop     { 0%, 11% { opacity: 0; } 14%, 85% { opacity: 1; } 92%, 100% { opacity: 0; } }
+    @keyframes verdict { 0% { opacity: 0; } 6% { opacity: 1; } 20% { opacity: .55; } 34% { opacity: 1; } 48% { opacity: .55; } 62%, 70% { opacity: 1; } 78%, 100% { opacity: 0; } }
+    @keyframes blink   { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+    @keyframes scan    { 0% { transform: translateY(-40px); } 100% { transform: translateY(320px); } }
+  </style>
+
+  <defs>
+    <linearGradient id="barGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#302b63"/>
+      <stop offset="1" stop-color="#F5B700"/>
+    </linearGradient>
+    <linearGradient id="scanGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#F5B700" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#F5B700" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#F5B700" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="card"><rect width="820" height="300" rx="14"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="820" height="300" fill="#0f0c29"/>
+    <rect class="scan" x="0" y="0" width="820" height="40"/>
+
+    <!-- window dots -->
+    <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+    <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+    <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+
+    <text class="title" x="28" y="62">&gt; running evaluation: ivan.v2026</text>
+    <rect class="cursor" x="355" y="49" width="10" height="17"/>
+
+    <g class="r1"><text class="label" x="28" y="102">validates model output</text>
+      <rect class="track" x="290" y="90" width="400" height="14" rx="7"/><rect class="bar" x="290" y="90" width="400" height="14" rx="7"/>
+      <text class="pass" x="710" y="102">✓ pass</text></g>
+    <g class="r2"><text class="label" x="28" y="134">tests before shipping</text>
+      <rect class="track" x="290" y="122" width="400" height="14" rx="7"/><rect class="bar" x="290" y="122" width="400" height="14" rx="7"/>
+      <text class="pass" x="710" y="134">✓ pass</text></g>
+    <g class="r3"><text class="label" x="28" y="166">catches judge bias</text>
+      <rect class="track" x="290" y="154" width="400" height="14" rx="7"/><rect class="bar" x="290" y="154" width="400" height="14" rx="7"/>
+      <text class="pass" x="710" y="166">✓ pass</text></g>
+    <g class="r4"><text class="label" x="28" y="198">measures data quality</text>
+      <rect class="track" x="290" y="186" width="400" height="14" rx="7"/><rect class="bar" x="290" y="186" width="400" height="14" rx="7"/>
+      <text class="pass" x="710" y="198">✓ pass</text></g>
+    <g class="r5"><text class="label" x="28" y="230">ships live apps</text>
+      <rect class="track" x="290" y="218" width="400" height="14" rx="7"/><rect class="bar" x="290" y="218" width="400" height="14" rx="7"/>
+      <text class="pass" x="710" y="230">✓ pass</text></g>
+
+    <text class="verdict" x="28" y="274">verdict: SHIP IT ⚡  (still leveling up: FastAPI · JWT · API-first)</text>
+  </g>
+</svg>
