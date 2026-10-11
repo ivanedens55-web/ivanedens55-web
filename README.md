@@ -9,7 +9,6 @@
 <!-- BADGE:START --><a href="https://github.com/ivanedens55-web?tab=repositories"><img src="https://img.shields.io/badge/projects-10_public-302b63?style=flat-square&labelColor=0f0c29" /></a><!-- BADGE:END -->
 <img src="https://img.shields.io/badge/shipping-weekly-F5B700?style=flat-square&labelColor=0f0c29" />
 <img src="https://img.shields.io/badge/tests-run_on_every_push-2ea043?style=flat-square&labelColor=0f0c29" />
-<img src="https://visitor-badge.laobi.icu/badge?page_id=ivanedens55-web&left_color=%230f0c29&right_color=%23302b63&left_text=profile%20views" alt="profile views" />
 
 </div>
 
