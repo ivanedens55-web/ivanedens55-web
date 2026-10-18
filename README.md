@@ -26,10 +26,10 @@
 |:--|:--:|:--|
 | Builds things that actually run | ✅ | <!-- COUNT:START -->10<!-- COUNT:END --> public projects, <!-- LIVE:START -->6<!-- LIVE:END --> deployed live |
 | Doesn't trust model output blindly | ✅ | Schema validation and prompt-injection guards in every AI app |
-| Tests before shipping | ✅ | pytest + GitHub Actions on the AI projects |
+| Tests before shipping | ✅ | 55–65 pytest tests each on three full-stack APIs, plus GitHub Actions CI |
 | Knows when an AI judge is biased | ✅ | Position-bias check in `llm-response-evaluator` |
 | Measures data quality, not vibes | ✅ | Cohen's kappa in `labellint` |
-| Currently leveling up | 🔄 | FastAPI · JWT auth · API-first design |
+| Currently leveling up | 🔄 | Contributing REST API tests to [CVAT](https://github.com/cvat-ai/cvat) · Docker · pytest at scale |
 
 <img width="100%" src="assets/divider.svg" />
 
@@ -39,24 +39,20 @@
   <img width="100%" src="assets/repo-bubbles.svg" alt="My 10 public repos as floating bubbles" />
 </a>
 
-<!-- LIVE DEMOS: replace each URL, then delete this comment's opening and closing markers to show the section.
 <p align="center">
   <b>🚀 Try them live:</b>
-  <a href="URL-1">Support desk</a> ·
-  <a href="URL-2">Job tracker</a> ·
-  <a href="URL-3">Link shortener</a> ·
-  <a href="URL-4">Event RSVP</a> ·
-  <a href="URL-5">Bill splitter</a> ·
-  <a href="URL-6">Perfumes store</a>
+  <a href="https://support-ticket-system-sigma-two.vercel.app">Support desk</a> ·
+  <a href="https://job-application-tracker-peach-kappa.vercel.app">Job tracker</a> ·
+  <a href="https://link-shortener-phi-swart.vercel.app">Link shortener</a> ·
+  <a href="https://event-rsvp-seven.vercel.app">Event RSVP</a>
 </p>
--->
 
 <img width="100%" src="assets/divider.svg" />
 
 ## 🧰 Toolbox
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=py,ts,nextjs,react,tailwind,flask,postgres,supabase,git,githubactions,vscode&perline=11" />
+  <img src="https://skillicons.dev/icons?i=py,fastapi,ts,nextjs,react,tailwind,flask,postgres,supabase,docker,linux,git,githubactions,vscode&perline=14" />
 </p>
 
 <img width="100%" src="assets/divider.svg" />
